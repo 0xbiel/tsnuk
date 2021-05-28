@@ -1,0 +1,17 @@
+.title {
+    font-weight: normal;
+}
+
+body {
+    margin: 0 auto;
+    width: 60%;
+}
+
+p {
+    font-size: 2rem;
+}
+
+.arts {
+    display: flex;
+    flex-direction: row;
+}
