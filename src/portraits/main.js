@@ -1,17 +1,18 @@
 let pic
-let centeredCanvas
 
 function preload() {
     pic = loadImage('assets/me.png')
 }
 
 function setup() {
-    centeredCanvas = createCanvas(pic.width, pic.height)
-    let centerX = (windowWidth - pic.width) / 2
-    let centerY = (windowHeight - pic.height) / 2
-    centeredCanvas.position(centerX, centerY)
-}
+    createCanvas(pic.width, pic.height)
 
-function draw() {
-    background(220)
+    //Get the image's pixels information.
+    for(let width = 0; width < pic.width; width+=5) {
+	for(let height = 0; height < pic.height; height+=5) {
+	    let imgColor = pic.get(width, height)
+	    stroke(color(imgColor))
+	    point(width, height)
+	}
+    }
 }
