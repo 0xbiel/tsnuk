@@ -1,7 +1,8 @@
 let pic
 
 function preload() {
-    pic = loadImage('assets/me.png')
+    //Image from thispersondoesnotexist.com
+    pic = loadImage('assets/base.png')
 }
 
 function setup() {
